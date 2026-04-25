@@ -1,0 +1,114 @@
+{
+  "hero": {
+    "bgImage": "/images/back.png",
+    "subtitle": "Səmimi Mühit & Bitməyən Əyləncə",
+    "title1": "GSG",
+    "title2": "AZERBAIJAN",
+    "description": "Sən də özünə uyğun səmimi bir mühit, bitməyən əyləncə və gerçək dostluqlar axtarırsan? O zaman axtarışın burda başa çatdı, tam olaraq doğru yerdəsən! "
+  },
+  "about": {
+    "title": "Niyə Biz?",
+    "subtitle": "Biz sadəcə bir Discord Serveri deyilik. GSG Azerbaijan çoxməqsədli, fərqli bacarıqları bir araya toplayan böyük bir ailədir.",
+    "features": [
+      {
+        "icon": "groups",
+        "title": "Səmimi Mühit",
+        "description": "Aktiv chat, səmimi söhbətlər və yeni dostluqlar qura biləcəyiniz tək ünvan. Hər kəsin özünü rahat hiss etdiyi, açıq və mehriban bir icma.",
+        "color": "primary"
+      },
+      {
+        "icon": "mic",
+        "title": "Dublaj Komandası",
+        "description": "Rəsmi Dublaj Komandamıza qoşul, peşəkar dublaj layihələrində iştirak et və öz səsini kəşf et. Yaradıcılığını ortaya qoy!",
+        "color": "secondary"
+      },
+      {
+        "icon": "sports_esports",
+        "title": "Oyun & Əyləncə",
+        "description": "Minecraft, CS2, Among Us və Roblox kimi oyunlarda komandanı qur, macəraya atıl. Hər axşam yeni bir əyləncə səni gözləyir!",
+        "color": "tertiary"
+      },
+      {
+        "icon": "shield",
+        "title": "Ədalətli Sistem",
+        "description": "Təcrübəli staff heyəti və moderasiya botumuz Chizi sayəsində güclü qorunma. Qaydalar hamıya bərabər tətbiq olunur.",
+        "color": "primary"
+      },
+      {
+        "icon": "handshake",
+        "title": "Etik Dəyərlər",
+        "description": "Hər kəsə hörmət, şəffaflıq və ədalət — bizim əsas prinsiplərimizdir. Toxik davranışa sıfır tolerantlıq, sağlam mühitə tam dəstək.",
+        "color": "secondary"
+      },
+      {
+        "icon": "celebration",
+        "title": "Çəkilişlər & Eventlər",
+        "description": "Müntəzəm çəkilişlər, yarışmalar və xüsusi tədbirlər! Aktiv ol, hədiyyələr qazan və icma ilə birlikdə əylən.",
+        "color": "tertiary"
+      }
+    ],
+    "stats": [
+      {
+        "icon": "groups",
+        "value": "200+",
+        "label": "Member Sayı",
+        "fill": 1
+      },
+      {
+        "icon": "verified_user",
+        "value": "Təhlükəsiz",
+        "label": "Aktiv Moderasiya",
+        "fill": 1
+      }
+    ]
+  },
+  "partners": [
+    {
+      "alt": "Oyunportal",
+      "src": "/images/partner/oyunportal.png",
+      "href": "https://oyunportal.shop",
+      "description": "Azərbaycanın ən legit rəqəmsal məhsul satış platformu. Sərfəli qiymətlər və GSG turnirlərinin dəyişməz baş sponsoru."
+    },
+    {
+      "alt": "Hangar Platform",
+      "src": "/images/partner/HangarMain.png",
+      "href": "https://hangar.7soulscompany.com/",
+      "description": "GSG, 7Souls Entertainment tərəfindən qurulmuş Hangar Networkun Azərbaycandaki ilk üzvüdür!"
+    },
+    {
+      "alt": "GrandLine",
+      "src": "/images/partner/grandline.png",
+      "href": "https://www.tiktok.com/@grandline_dublaj",
+      "description": "Gənc Dublyaj Komandası, GSG-nin Dublyaj Partneri"
+    },
+    {
+      "alt": "Gatsu",
+      "src": "/images/partner/gatsu.png",
+      "href": "https://www.tiktok.com/@_gatsu.dub",
+      "description": "Təcrübəli Dublyaj Komandası, GSG-nin Dublyaj Partneri"
+    }
+  ],
+  "events": {
+    "title": "Eventlər",
+    "subtitle": "Yaradıcılıq, Əyləncə və Oyunlar",
+    "featured": {
+      "image": "/images/event.png",
+      "tag": "OYUNPORTAL DƏSTƏYİ İLƏ",
+      "title": "İstedadını Göstər",
+      "description": "Dublaj, video edit, oyun və s. yarışmaları. oyunportal.shop dəstəyi ilə möhtəşəm hədiyyələr qazan!",
+      "date": "DAİMİ",
+      "location": "DISCORD"
+    }
+  },
+  "cta": {
+    "title1": "BİZƏ",
+    "title2": "QOŞUL",
+    "buttonText": "Discorda Giriş",
+    "discordLink": "https://discord.gg/gsgaz"
+  },
+  "socials": {
+    "discord": "https://discord.gg/gsgaz",
+    "instagram": "#",
+    "tiktok": "#"
+  }
+}

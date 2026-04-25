@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /images/partner/
+
+Sitemap: https://gsgaz.com/sitemap.xml

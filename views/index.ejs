@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html class="dark" lang="az">
+<head>
+    <%- include('partials/head') %>
+</head>
+<body class="bg-background overflow-x-hidden">
+    <!-- TopNavBar -->
+    <%- include('partials/nav') %>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="relative min-h-screen flex items-end pt-24 overflow-hidden bg-surface">
+            <div class="absolute inset-0 z-0 overflow-hidden">
+                <img id="hero-bg" alt="Urban Manga Hero" class="w-full h-full object-cover opacity-40 grayscale hero-bg-anim" src="<%= data.hero.bgImage %>"/>
+                <div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
+                <div class="halftone absolute inset-0"></div>
+            </div>
+            <div class="relative z-10 w-full max-w-[1440px] mx-auto px-4 sm:px-6 pb-12 sm:pb-20">
+                <div class="flex flex-col gap-0">
+                    <span class="hero-subtitle font-headline text-primary text-xs sm:text-sm uppercase tracking-[0.5em] mb-4"><%= data.hero.subtitle %></span>
+                    <h1 class="hero-title font-headline font-black text-[clamp(3rem,12vw,12rem)] leading-[0.8] tracking-tighter uppercase mb-4 sm:mb-6">
+                        <%= data.hero.title1 %><br/><span class="manga-outline"><%= data.hero.title2 %></span>
+                    </h1>
+                    <div class="max-w-xl border-l-4 border-white pl-4 sm:pl-6 mt-6 sm:mt-8 hero-desc">
+                        <p class="font-body text-lg sm:text-xl md:text-2xl text-on-surface leading-tight font-light">
+                            <%= data.hero.description %>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Haqqımızda (About Us) — Redesigned -->
+        <section id="about" class="bg-surface-container-low py-16 sm:py-24 lg:py-32 relative">
+            <div class="max-w-[1440px] mx-auto px-4 sm:px-6">
+                <!-- Header -->
+                <div class="mb-12 sm:mb-16 lg:mb-20">
+                    <h2 class="reveal-left font-headline text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold uppercase tracking-tighter mb-4 sm:mb-6"><%= data.about.title %></h2>
+                    <div class="line-grow bg-primary h-2 w-24 mb-6 sm:mb-8"></div>
+                    <p class="reveal font-body text-base sm:text-lg md:text-xl text-on-surface-variant leading-relaxed max-w-2xl"><%= data.about.subtitle %></p>
+                </div>
+
+                <!-- Feature Cards Grid -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 lg:gap-6 mb-8 sm:mb-12">
+                    <% data.about.features.forEach((feature, i) => { %>
+                    <div class="reveal-scale delay-<%= Math.min(i + 1, 6) %> feature-card p-6 sm:p-8 flex flex-col gap-4 sm:gap-5 cursor-default">
+                        <!-- Icon -->
+                        <div class="feature-icon-wrap">
+                            <div class="feature-icon w-12 h-12 sm:w-14 sm:h-14 flex items-center justify-center bg-white/5 border border-white/10">
+                                <span class="material-symbols-outlined text-2xl sm:text-3xl text-white" style="font-variation-settings: 'FILL' 1;">
+                                    <%= feature.icon %>
+                                </span>
+                            </div>
+                        </div>
+                        <!-- Line -->
+                        <div class="feature-line"></div>
+                        <!-- Content -->
+                        <div>
+                            <h3 class="font-headline text-lg sm:text-xl font-bold uppercase tracking-tight text-white mb-2 sm:mb-3"><%= feature.title %></h3>
+                            <p class="font-body text-sm sm:text-base text-on-surface-variant leading-relaxed"><%= feature.description %></p>
+                        </div>
+                    </div>
+                    <% }) %>
+                </div>
+
+                <!-- Stats Row -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+                    <% data.about.stats.forEach((stat, i) => { %>
+                    <% if (i === 0) { %>
+                    <div class="reveal-scale delay-1 about-stat p-6 sm:p-8 flex items-center gap-4 sm:gap-6 cursor-default">
+                        <span class="material-symbols-outlined text-3xl sm:text-4xl text-white" style="font-variation-settings: 'FILL' <%= stat.fill %>;">
+                            <%= stat.icon %>
+                        </span>
+                        <div>
+                            <h3 class="font-headline text-2xl sm:text-3xl font-bold uppercase text-white"><%= stat.value %></h3>
+                            <p class="font-label text-xs uppercase tracking-widest text-on-surface-variant"><%= stat.label %></p>
+                        </div>
+                    </div>
+                    <% } else { %>
+                    <div class="reveal-scale delay-2 about-stat about-stat-primary p-6 sm:p-8 flex items-center gap-4 sm:gap-6 cursor-default">
+                        <span class="material-symbols-outlined text-3xl sm:text-4xl text-[#131313]" style="font-variation-settings: 'FILL' <%= stat.fill %>;">
+                            <%= stat.icon %>
+                        </span>
+                        <div>
+                            <h3 class="font-headline text-2xl sm:text-3xl font-bold uppercase text-[#131313]"><%= stat.value %></h3>
+                            <p class="font-label text-xs uppercase tracking-widest text-[#131313]/60"><%= stat.label %></p>
+                        </div>
+                    </div>
+                    <% } %>
+                    <% }) %>
+                </div>
+            </div>
+        </section>
+
+        <!-- Partnyorlarımız -->
+        <section id="partners" class="bg-surface py-12 sm:py-16 border-t border-outline-variant/15">
+            <div class="max-w-[1440px] mx-auto px-4 sm:px-6">
+                <div class="reveal-left flex items-center gap-4 sm:gap-8 mb-8 sm:mb-10">
+                    <h2 class="font-headline text-xl sm:text-2xl font-bold uppercase tracking-widest shrink-0">Partnyorlar</h2>
+                    <div class="h-[1px] w-full bg-outline-variant/30"></div>
+                </div>
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4">
+                    <% data.partners.forEach((partner, i) => { %>
+                    <div class="reveal-scale delay-<%= Math.min(i + 1, 6) %> partner-card bg-surface-container py-6 sm:py-8 px-4 sm:px-6 flex items-center justify-center border border-outline-variant/10 hover:opacity-100">
+                        <!-- Tooltip -->
+                        <div class="partner-tooltip">
+                            <p class="font-headline text-xs sm:text-sm font-bold text-white uppercase tracking-wider mb-1"><%= partner.alt %></p>
+                            <p class="font-body text-[11px] sm:text-xs text-on-surface-variant leading-relaxed"><%= partner.description %></p>
+                        </div>
+                        <% if (partner.href) { %>
+                        <a href="<%= partner.href %>" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center">
+                            <img alt="<%= partner.alt %>" class="h-8 sm:h-12 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity" src="<%= partner.src %>"/>
+                        </a>
+                        <% } else { %>
+                        <img alt="<%= partner.alt %>" class="h-8 sm:h-12 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity" src="<%= partner.src %>"/>
+                        <% } %>
+                    </div>
+                    <% }) %>
+                </div>
+            </div>
+        </section>
+
+        <!-- Eventlərimiz -->
+        <section id="events" class="bg-background py-12 sm:py-16 lg:py-20">
+            <div class="max-w-[1440px] mx-auto px-4 sm:px-6">
+                <div class="reveal flex flex-col md:flex-row justify-between items-baseline gap-4 mb-8 sm:mb-10">
+                    <h2 class="font-headline text-4xl sm:text-5xl md:text-8xl font-black uppercase tracking-tighter"><%= data.events.title %></h2>
+                    <p class="font-label text-xs tracking-[0.3em] uppercase text-outline"><%= data.events.subtitle %></p>
+                </div>
+                <!-- Featured Event -->
+                <div class="reveal-scale bg-surface-container relative group overflow-hidden min-h-[350px] sm:min-h-[450px] md:min-h-[500px]">
+                    <img alt="Event Banner" class="absolute inset-0 w-full h-full object-cover opacity-50 transition-transform duration-700 group-hover:scale-105" src="<%= data.events.featured.image %>"/>
+                    <div class="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent"></div>
+                    <div class="absolute bottom-0 p-6 sm:p-10 md:p-14 flex flex-col gap-3 sm:gap-4">
+                        <span class="bg-primary text-on-primary inline-block px-3 sm:px-4 py-1 text-xs font-bold uppercase font-label w-fit"><%= data.events.featured.tag %></span>
+                        <h3 class="font-headline text-3xl sm:text-5xl md:text-7xl font-black uppercase leading-none"><%= data.events.featured.title %></h3>
+                        <p class="font-body text-on-surface-variant max-w-lg text-sm sm:text-base md:text-lg"><%= data.events.featured.description %></p>
+                        <div class="flex gap-6 sm:gap-10 mt-2 sm:mt-4">
+                            <div class="flex flex-col">
+                                <span class="text-xs uppercase text-outline font-label">Tarix</span>
+                                <span class="font-headline font-bold text-sm sm:text-lg"><%= data.events.featured.date %></span>
+                            </div>
+                            <div class="flex flex-col">
+                                <span class="text-xs uppercase text-outline font-label">Yer</span>
+                                <span class="font-headline font-bold text-sm sm:text-lg"><%= data.events.featured.location %></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-20 sm:py-32 lg:py-40 bg-surface-container-lowest relative overflow-hidden border-y border-outline-variant/15">
+            <div class="absolute inset-0 halftone opacity-10"></div>
+            <div class="max-w-[1440px] mx-auto px-4 sm:px-6 text-center relative z-10">
+                <h2 class="reveal-scale font-headline text-5xl sm:text-6xl md:text-9xl font-black uppercase tracking-tighter mb-8 sm:mb-12">
+                    <%= data.cta.title1 %><br/><span class="manga-outline"><%= data.cta.title2 %></span>
+                </h2>
+                <div class="reveal delay-2 flex flex-col md:flex-row justify-center gap-4 sm:gap-6">
+                    <a class="cta-btn bg-primary text-on-primary px-8 sm:px-12 py-4 sm:py-6 font-headline font-black text-lg sm:text-xl uppercase tracking-tighter flex items-center justify-center gap-4 group" href="<%= data.cta.discordLink || data.socials.discord %>" target="_blank" rel="noopener noreferrer">
+                        <%= data.cta.buttonText %>
+                        <span class="material-symbols-outlined group-hover:translate-x-2 transition-transform">arrow_forward</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <%- include('partials/footer') %>
+</body>
+</html>

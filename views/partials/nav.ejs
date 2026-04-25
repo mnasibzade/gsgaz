@@ -1,0 +1,38 @@
+<nav id="main-navbar" class="fixed top-0 w-full z-50 bg-[#131313]/70 backdrop-blur-xl navbar-visible nav-entrance">
+    <div class="flex justify-between items-center w-full px-4 sm:px-6 py-4 max-w-[1440px] mx-auto">
+        <a href="/" class="nav-logo text-xl sm:text-2xl font-black italic tracking-tighter text-white font-['Space_Grotesk'] uppercase">
+            GSG
+        </a>
+        <div class="hidden md:flex gap-6 lg:gap-8 items-center">
+            <a class="nav-link font-['Space_Grotesk'] uppercase tracking-tighter text-[#D4D4D4] text-sm lg:text-base nav-stagger-1" href="#about">Haqqımızda</a>
+            <a class="nav-link font-['Space_Grotesk'] uppercase tracking-tighter text-[#D4D4D4] text-sm lg:text-base nav-stagger-2" href="#partners">Partnyorlar</a>
+            <a class="nav-link font-['Space_Grotesk'] uppercase tracking-tighter text-[#D4D4D4] text-sm lg:text-base nav-stagger-3" href="#events">Eventlər</a>
+        </div>
+        <div class="flex items-center gap-4">
+            <a href="<%= data.socials.discord %>" target="_blank" rel="noopener noreferrer" class="nav-stagger-4 hidden sm:block bg-primary text-on-primary font-['Space_Grotesk'] uppercase font-bold px-6 lg:px-8 py-2 hover:bg-white hover:shadow-[4px_4px_0px_0px_rgba(255,255,255,0.3)] transition-all active:translate-y-0.5 text-sm lg:text-base">
+                Qoşul
+            </a>
+            <!-- Mobile Hamburger -->
+            <button id="hamburger-btn" class="hamburger md:hidden flex flex-col justify-center items-center p-2 z-[60]" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </div>
+</nav>
+
+<!-- Mobile Menu Overlay -->
+<div id="mobile-overlay" class="mobile-overlay fixed inset-0 bg-black/60 z-40 md:hidden"></div>
+
+<!-- Mobile Menu -->
+<div id="mobile-menu" class="mobile-menu fixed top-0 right-0 h-full w-72 bg-[#131313] z-50 md:hidden border-l border-outline-variant/20">
+    <div class="flex flex-col pt-24 px-8 gap-6">
+        <a class="font-['Space_Grotesk'] uppercase tracking-tighter text-white text-xl font-bold border-b border-outline-variant/20 pb-4" href="#about">Haqqımızda</a>
+        <a class="font-['Space_Grotesk'] uppercase tracking-tighter text-[#D4D4D4] hover:text-white transition-colors text-xl font-bold border-b border-outline-variant/20 pb-4" href="#partners">Partnyorlar</a>
+        <a class="font-['Space_Grotesk'] uppercase tracking-tighter text-[#D4D4D4] hover:text-white transition-colors text-xl font-bold border-b border-outline-variant/20 pb-4" href="#events">Eventlər</a>
+        <a href="<%= data.socials.discord %>" target="_blank" rel="noopener noreferrer" class="bg-primary text-on-primary font-['Space_Grotesk'] uppercase font-bold px-8 py-4 text-center mt-4 hover:shadow-[4px_4px_0px_0px_rgba(255,255,255,0.3)] transition-all">
+            Qoşul
+        </a>
+    </div>
+</div>
