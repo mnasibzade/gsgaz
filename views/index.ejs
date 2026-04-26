@@ -99,20 +99,20 @@
                     <h2 class="font-headline text-xl sm:text-2xl font-bold uppercase tracking-widest shrink-0">Partnyorlar</h2>
                     <div class="h-[1px] w-full bg-outline-variant/30"></div>
                 </div>
-                <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4">
+                <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 sm:gap-4 md:gap-6">
                     <% data.partners.forEach((partner, i) => { %>
-                    <div class="reveal-scale delay-<%= Math.min(i + 1, 6) %> partner-card bg-surface-container py-6 sm:py-8 px-4 sm:px-6 flex items-center justify-center border border-outline-variant/10 hover:opacity-100">
+                    <div class="reveal-scale delay-<%= Math.min(i + 1, 6) %> partner-card bg-surface-container aspect-[3/2] sm:aspect-video flex items-center justify-center border border-outline-variant/10 hover:opacity-100 p-4 sm:p-6 transition-all duration-300">
                         <!-- Tooltip -->
                         <div class="partner-tooltip">
                             <p class="font-headline text-xs sm:text-sm font-bold text-white uppercase tracking-wider mb-1"><%= partner.alt %></p>
                             <p class="font-body text-[11px] sm:text-xs text-on-surface-variant leading-relaxed"><%= partner.description %></p>
                         </div>
                         <% if (partner.href) { %>
-                        <a href="<%= partner.href %>" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center">
-                            <img alt="<%= partner.alt %>" class="h-8 sm:h-12 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity" src="<%= partner.src %>"/>
+                        <a href="<%= partner.href %>" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center w-full h-full">
+                            <img alt="<%= partner.alt %>" class="max-h-12 sm:max-h-16 w-auto max-w-full object-contain opacity-70 group-hover:opacity-100 transition-opacity" src="<%= partner.src %>"/>
                         </a>
                         <% } else { %>
-                        <img alt="<%= partner.alt %>" class="h-8 sm:h-12 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity" src="<%= partner.src %>"/>
+                        <img alt="<%= partner.alt %>" class="max-h-12 sm:max-h-16 w-auto max-w-full object-contain opacity-70 hover:opacity-100 transition-opacity" src="<%= partner.src %>"/>
                         <% } %>
                     </div>
                     <% }) %>
